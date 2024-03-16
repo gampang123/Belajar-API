@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <title>Tugas Akhir Gampang Rozaki</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-image: url("https://wallpapercave.com/wp/DZiyGhD.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        header {
+            background-color: blue;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            padding: 10px 20px;
+            box-sizing: border-box;
+        }
+        
+        header h2 {
+            margin: 0;
+            color: white;
+        }
+        
+        #content {
+            margin-top: 70px;
+            /* Tinggi header + margin atas */
+            padding: 20px;
+        }
+        
+        input {
+            width: 280px;
+            height: 30px;
+            border: none;
+            border-radius: 5px;
+        }
+        
+        button {
+            width: 60px;
+            height: 27px;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            background-color: yellow;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .movie-card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+        }
+        
+        .movie-card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        .movie-info {
+            padding: 10px;
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+        
+        .movie-info h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .movie-info p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2 style="float: left;">LMovie</h2>
+        <h2 style="float: right;">Tugas Akhir JS dan JQ Gampang Rozaki</h2>
+    </header>
+
+    <div id="content">
+        <div style="display: inline;">
+            <input placeholder="Masukkan Judul Film Disini" name="query" id="query">
+            <button id="btnCari">Cari</button>
+        </div>
+        <br>
+        <br>
+        <div id="hasilCari" class="grid-container">
+            <!-- Hasil Pencarian -->
+        </div>
+    </div>
+    <script src="TugasAkhir_GampangRozaki.js"></script>
+</body>
+
+</html>
